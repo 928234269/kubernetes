@@ -11,7 +11,7 @@ go_test(
     srcs = ["removeall_test.go"],
     embed = [":go_default_library"],
     deps = [
-        "//staging/src/k8s.io/client-go/util/testing:go_default_library",
+        "//vendor/k8s.io/client-go/util/testing:go_default_library",
         "//vendor/k8s.io/utils/mount:go_default_library",
     ],
 )

@@ -11,21 +11,3 @@ go_library(
     visibility = ["//visibility:public"],
     deps = ["//vendor/gonum.org/v1/gonum/blas:go_default_library"],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/gonum.org/v1/gonum/lapack/gonum:all-srcs",
-        "//vendor/gonum.org/v1/gonum/lapack/lapack64:all-srcs",
-    ],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

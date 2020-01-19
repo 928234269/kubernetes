@@ -10,8 +10,8 @@ go_library(
     srcs = ["guestbook.go"],
     importpath = "k8s.io/kubernetes/test/images/agnhost/guestbook",
     deps = [
-        "//staging/src/k8s.io/apimachinery/pkg/util/net:go_default_library",
         "//vendor/github.com/spf13/cobra:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/util/net:go_default_library",
     ],
 )
 

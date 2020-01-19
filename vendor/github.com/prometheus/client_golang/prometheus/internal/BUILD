@@ -5,20 +5,6 @@ go_library(
     srcs = ["metric.go"],
     importmap = "k8s.io/kubernetes/vendor/github.com/prometheus/client_golang/prometheus/internal",
     importpath = "github.com/prometheus/client_golang/prometheus/internal",
-    visibility = ["//staging/src/k8s.io/component-base/metrics:prometheus_import_allow_list"],
+    visibility = ["//vendor/github.com/prometheus/client_golang/prometheus:__subpackages__"],
     deps = ["//vendor/github.com/prometheus/client_model/go:go_default_library"],
-)
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [":package-srcs"],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
 )

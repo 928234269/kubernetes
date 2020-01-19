@@ -12,8 +12,8 @@ go_library(
     importpath = "k8s.io/kubernetes/test/instrumentation",
     visibility = ["//visibility:private"],
     deps = [
-        "//staging/src/k8s.io/component-base/metrics:go_default_library",
         "//vendor/gopkg.in/yaml.v2:go_default_library",
+        "//vendor/k8s.io/component-base/metrics:go_default_library",
     ],
 )
 
@@ -62,5 +62,5 @@ go_test(
     srcs = ["main_test.go"],
     data = glob(["testdata/**"]),
     embed = [":go_default_library"],
-    deps = ["//staging/src/k8s.io/component-base/metrics:go_default_library"],
+    deps = ["//vendor/k8s.io/component-base/metrics:go_default_library"],
 )

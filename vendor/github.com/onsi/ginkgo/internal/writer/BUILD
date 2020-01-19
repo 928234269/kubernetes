@@ -10,17 +10,3 @@ go_library(
     importpath = "github.com/onsi/ginkgo/internal/writer",
     visibility = ["//vendor/github.com/onsi/ginkgo:__subpackages__"],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [":package-srcs"],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

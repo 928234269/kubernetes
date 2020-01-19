@@ -7,12 +7,12 @@ go_library(
     importpath = "k8s.io/kubectl/pkg/proxy",
     visibility = ["//visibility:public"],
     deps = [
-        "//staging/src/k8s.io/apimachinery/pkg/util/net:go_default_library",
-        "//staging/src/k8s.io/apimachinery/pkg/util/proxy:go_default_library",
-        "//staging/src/k8s.io/client-go/rest:go_default_library",
-        "//staging/src/k8s.io/client-go/transport:go_default_library",
-        "//staging/src/k8s.io/kubectl/pkg/util:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/util/net:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/util/proxy:go_default_library",
+        "//vendor/k8s.io/client-go/rest:go_default_library",
+        "//vendor/k8s.io/client-go/transport:go_default_library",
         "//vendor/k8s.io/klog:go_default_library",
+        "//vendor/k8s.io/kubectl/pkg/util:go_default_library",
     ],
 )
 
@@ -21,8 +21,8 @@ go_test(
     srcs = ["proxy_server_test.go"],
     embed = [":go_default_library"],
     deps = [
-        "//staging/src/k8s.io/apimachinery/pkg/util/proxy:go_default_library",
-        "//staging/src/k8s.io/client-go/rest:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/util/proxy:go_default_library",
+        "//vendor/k8s.io/client-go/rest:go_default_library",
     ],
 )
 

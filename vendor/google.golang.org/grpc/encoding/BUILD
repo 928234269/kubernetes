@@ -7,20 +7,3 @@ go_library(
     importpath = "google.golang.org/grpc/encoding",
     visibility = ["//visibility:public"],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/google.golang.org/grpc/encoding/proto:all-srcs",
-    ],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

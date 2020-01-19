@@ -1,0 +1,68 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "autoscale.go",
+        "clusterrolebinding.go",
+        "configmap.go",
+        "deployment.go",
+        "env_file.go",
+        "generator.go",
+        "namespace.go",
+        "pdb.go",
+        "priorityclass.go",
+        "quota.go",
+        "rolebinding.go",
+        "run.go",
+        "secret.go",
+        "secret_for_docker_registry.go",
+        "secret_for_tls.go",
+        "service.go",
+        "service_basic.go",
+        "serviceaccount.go",
+    ],
+    importmap = "k8s.io/kubernetes/vendor/k8s.io/kubectl/pkg/generate/versioned",
+    importpath = "k8s.io/kubectl/pkg/generate/versioned",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//vendor/k8s.io/api/apps/v1:go_default_library",
+        "//vendor/k8s.io/api/apps/v1beta1:go_default_library",
+        "//vendor/k8s.io/api/autoscaling/v1:go_default_library",
+        "//vendor/k8s.io/api/batch/v1:go_default_library",
+        "//vendor/k8s.io/api/batch/v1beta1:go_default_library",
+        "//vendor/k8s.io/api/batch/v2alpha1:go_default_library",
+        "//vendor/k8s.io/api/core/v1:go_default_library",
+        "//vendor/k8s.io/api/extensions/v1beta1:go_default_library",
+        "//vendor/k8s.io/api/policy/v1beta1:go_default_library",
+        "//vendor/k8s.io/api/rbac/v1:go_default_library",
+        "//vendor/k8s.io/api/rbac/v1beta1:go_default_library",
+        "//vendor/k8s.io/api/scheduling/v1:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/api/errors:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/api/resource:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/apis/meta/v1:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/runtime:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/runtime/schema:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/util/intstr:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/util/sets:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/util/validation:go_default_library",
+        "//vendor/k8s.io/client-go/discovery:go_default_library",
+        "//vendor/k8s.io/kubectl/pkg/generate:go_default_library",
+        "//vendor/k8s.io/kubectl/pkg/util:go_default_library",
+        "//vendor/k8s.io/kubectl/pkg/util/hash:go_default_library",
+    ],
+)
+
+filegroup(
+    name = "package-srcs",
+    srcs = glob(["**"]),
+    tags = ["automanaged"],
+    visibility = ["//visibility:private"],
+)
+
+filegroup(
+    name = "all-srcs",
+    srcs = [":package-srcs"],
+    tags = ["automanaged"],
+    visibility = ["//visibility:public"],
+)

@@ -10,17 +10,3 @@ go_library(
     importpath = "golang.org/x/crypto/ed25519/internal/edwards25519",
     visibility = ["//vendor/golang.org/x/crypto/ed25519:__subpackages__"],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [":package-srcs"],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

@@ -19,36 +19,3 @@ go_library(
         "//vendor/go.uber.org/zap:go_default_library",
     ],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/go.etcd.io/etcd/etcdserver/api/etcdhttp:all-srcs",
-        "//vendor/go.etcd.io/etcd/etcdserver/api/membership:all-srcs",
-        "//vendor/go.etcd.io/etcd/etcdserver/api/rafthttp:all-srcs",
-        "//vendor/go.etcd.io/etcd/etcdserver/api/snap:all-srcs",
-        "//vendor/go.etcd.io/etcd/etcdserver/api/v2auth:all-srcs",
-        "//vendor/go.etcd.io/etcd/etcdserver/api/v2discovery:all-srcs",
-        "//vendor/go.etcd.io/etcd/etcdserver/api/v2error:all-srcs",
-        "//vendor/go.etcd.io/etcd/etcdserver/api/v2http:all-srcs",
-        "//vendor/go.etcd.io/etcd/etcdserver/api/v2stats:all-srcs",
-        "//vendor/go.etcd.io/etcd/etcdserver/api/v2store:all-srcs",
-        "//vendor/go.etcd.io/etcd/etcdserver/api/v2v3:all-srcs",
-        "//vendor/go.etcd.io/etcd/etcdserver/api/v3alarm:all-srcs",
-        "//vendor/go.etcd.io/etcd/etcdserver/api/v3client:all-srcs",
-        "//vendor/go.etcd.io/etcd/etcdserver/api/v3compactor:all-srcs",
-        "//vendor/go.etcd.io/etcd/etcdserver/api/v3election:all-srcs",
-        "//vendor/go.etcd.io/etcd/etcdserver/api/v3lock:all-srcs",
-        "//vendor/go.etcd.io/etcd/etcdserver/api/v3rpc:all-srcs",
-    ],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

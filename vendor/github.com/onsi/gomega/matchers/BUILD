@@ -58,23 +58,3 @@ go_library(
         "//vendor/gopkg.in/yaml.v2:go_default_library",
     ],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/github.com/onsi/gomega/matchers/support/goraph/bipartitegraph:all-srcs",
-        "//vendor/github.com/onsi/gomega/matchers/support/goraph/edge:all-srcs",
-        "//vendor/github.com/onsi/gomega/matchers/support/goraph/node:all-srcs",
-        "//vendor/github.com/onsi/gomega/matchers/support/goraph/util:all-srcs",
-    ],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

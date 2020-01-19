@@ -14,10 +14,10 @@ go_test(
     ],
     embed = [":go_default_library"],
     deps = [
-        "//staging/src/k8s.io/component-base/metrics/legacyregistry:go_default_library",
-        "//staging/src/k8s.io/component-base/metrics/testutil:go_default_library",
         "//vendor/google.golang.org/grpc/codes:go_default_library",
         "//vendor/google.golang.org/grpc/status:go_default_library",
+        "//vendor/k8s.io/component-base/metrics/legacyregistry:go_default_library",
+        "//vendor/k8s.io/component-base/metrics/testutil:go_default_library",
     ],
 )
 
@@ -30,10 +30,10 @@ go_library(
     importmap = "k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/storage/value",
     importpath = "k8s.io/apiserver/pkg/storage/value",
     deps = [
-        "//staging/src/k8s.io/apimachinery/pkg/util/errors:go_default_library",
-        "//staging/src/k8s.io/component-base/metrics:go_default_library",
-        "//staging/src/k8s.io/component-base/metrics/legacyregistry:go_default_library",
         "//vendor/google.golang.org/grpc/status:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/util/errors:go_default_library",
+        "//vendor/k8s.io/component-base/metrics:go_default_library",
+        "//vendor/k8s.io/component-base/metrics/legacyregistry:go_default_library",
     ],
 )
 

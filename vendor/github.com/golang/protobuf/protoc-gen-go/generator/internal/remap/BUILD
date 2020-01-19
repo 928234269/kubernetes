@@ -7,17 +7,3 @@ go_library(
     importpath = "github.com/golang/protobuf/protoc-gen-go/generator/internal/remap",
     visibility = ["//vendor/github.com/golang/protobuf/protoc-gen-go/generator:__subpackages__"],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [":package-srcs"],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

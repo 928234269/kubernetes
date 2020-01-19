@@ -12,17 +12,3 @@ go_library(
     visibility = ["//visibility:public"],
     deps = ["//vendor/k8s.io/kube-openapi/pkg/util/proto:go_default_library"],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [":package-srcs"],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

@@ -12,20 +12,3 @@ go_library(
     visibility = ["//visibility:public"],
     deps = ["//vendor/github.com/coredns/corefile-migration/migration/corefile:go_default_library"],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/github.com/coredns/corefile-migration/migration/corefile:all-srcs",
-    ],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

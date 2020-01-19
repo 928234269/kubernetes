@@ -30,7 +30,7 @@ go_library(
     ],
     importmap = "k8s.io/kubernetes/vendor/github.com/prometheus/client_golang/prometheus",
     importpath = "github.com/prometheus/client_golang/prometheus",
-    visibility = ["//staging/src/k8s.io/component-base/metrics:prometheus_import_allow_list"],
+    visibility = ["//visibility:public"],
     deps = [
         "//vendor/github.com/beorn7/perks/quantile:go_default_library",
         "//vendor/github.com/golang/protobuf/proto:go_default_library",
@@ -77,23 +77,4 @@ go_library(
         ],
         "//conditions:default": [],
     }),
-)
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/github.com/prometheus/client_golang/prometheus/internal:all-srcs",
-        "//vendor/github.com/prometheus/client_golang/prometheus/promhttp:all-srcs",
-        "//vendor/github.com/prometheus/client_golang/prometheus/testutil:all-srcs",
-    ],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
 )

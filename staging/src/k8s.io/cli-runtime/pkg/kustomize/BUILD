@@ -7,7 +7,7 @@ go_library(
     importpath = "k8s.io/cli-runtime/pkg/kustomize",
     visibility = ["//visibility:public"],
     deps = [
-        "//staging/src/k8s.io/cli-runtime/pkg/kustomize/k8sdeps:go_default_library",
+        "//vendor/k8s.io/cli-runtime/pkg/kustomize/k8sdeps:go_default_library",
         "//vendor/sigs.k8s.io/kustomize/pkg/commands/build:go_default_library",
         "//vendor/sigs.k8s.io/kustomize/pkg/fs:go_default_library",
     ],

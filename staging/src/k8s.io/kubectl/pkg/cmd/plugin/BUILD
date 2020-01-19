@@ -7,11 +7,11 @@ go_library(
     importpath = "k8s.io/kubectl/pkg/cmd/plugin",
     visibility = ["//visibility:public"],
     deps = [
-        "//staging/src/k8s.io/cli-runtime/pkg/genericclioptions:go_default_library",
-        "//staging/src/k8s.io/kubectl/pkg/cmd/util:go_default_library",
-        "//staging/src/k8s.io/kubectl/pkg/util/i18n:go_default_library",
-        "//staging/src/k8s.io/kubectl/pkg/util/templates:go_default_library",
         "//vendor/github.com/spf13/cobra:go_default_library",
+        "//vendor/k8s.io/cli-runtime/pkg/genericclioptions:go_default_library",
+        "//vendor/k8s.io/kubectl/pkg/cmd/util:go_default_library",
+        "//vendor/k8s.io/kubectl/pkg/util/i18n:go_default_library",
+        "//vendor/k8s.io/kubectl/pkg/util/templates:go_default_library",
     ],
 )
 
@@ -40,5 +40,5 @@ go_test(
     srcs = ["plugin_test.go"],
     data = glob(["testdata/**"]),
     embed = [":go_default_library"],
-    deps = ["//staging/src/k8s.io/cli-runtime/pkg/genericclioptions:go_default_library"],
+    deps = ["//vendor/k8s.io/cli-runtime/pkg/genericclioptions:go_default_library"],
 )

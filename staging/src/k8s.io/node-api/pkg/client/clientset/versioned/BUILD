@@ -10,10 +10,10 @@ go_library(
     importpath = "k8s.io/node-api/pkg/client/clientset/versioned",
     visibility = ["//visibility:public"],
     deps = [
-        "//staging/src/k8s.io/client-go/discovery:go_default_library",
-        "//staging/src/k8s.io/client-go/rest:go_default_library",
-        "//staging/src/k8s.io/client-go/util/flowcontrol:go_default_library",
         "//staging/src/k8s.io/node-api/pkg/client/clientset/versioned/typed/node/v1alpha1:go_default_library",
+        "//vendor/k8s.io/client-go/discovery:go_default_library",
+        "//vendor/k8s.io/client-go/rest:go_default_library",
+        "//vendor/k8s.io/client-go/util/flowcontrol:go_default_library",
     ],
 )
 

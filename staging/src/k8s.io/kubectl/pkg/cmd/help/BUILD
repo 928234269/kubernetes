@@ -7,9 +7,9 @@ go_library(
     importpath = "k8s.io/kubectl/pkg/cmd/help",
     visibility = ["//visibility:public"],
     deps = [
-        "//staging/src/k8s.io/kubectl/pkg/util/i18n:go_default_library",
-        "//staging/src/k8s.io/kubectl/pkg/util/templates:go_default_library",
         "//vendor/github.com/spf13/cobra:go_default_library",
+        "//vendor/k8s.io/kubectl/pkg/util/i18n:go_default_library",
+        "//vendor/k8s.io/kubectl/pkg/util/templates:go_default_library",
     ],
 )
 

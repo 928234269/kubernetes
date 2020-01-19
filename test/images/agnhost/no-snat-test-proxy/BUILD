@@ -10,8 +10,8 @@ go_library(
     srcs = ["main.go"],
     importpath = "k8s.io/kubernetes/test/images/agnhost/no-snat-test-proxy",
     deps = [
-        "//staging/src/k8s.io/component-base/logs:go_default_library",
         "//vendor/github.com/spf13/cobra:go_default_library",
+        "//vendor/k8s.io/component-base/logs:go_default_library",
     ],
 )
 

@@ -16,20 +16,5 @@ go_library(
 go_binary(
     name = "golint",
     embed = [":go_default_library"],
-    tags = ["manual"],
-    visibility = ["//visibility:public"],
-)
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [":package-srcs"],
-    tags = ["automanaged"],
     visibility = ["//visibility:public"],
 )

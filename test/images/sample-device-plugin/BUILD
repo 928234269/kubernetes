@@ -9,8 +9,8 @@ go_library(
     visibility = ["//visibility:private"],
     deps = [
         "//pkg/kubelet/cm/devicemanager:go_default_library",
-        "//staging/src/k8s.io/kubelet/pkg/apis/deviceplugin/v1beta1:go_default_library",
         "//vendor/k8s.io/klog:go_default_library",
+        "//vendor/k8s.io/kubelet/pkg/apis/deviceplugin/v1beta1:go_default_library",
     ],
 )
 

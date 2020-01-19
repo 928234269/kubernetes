@@ -21,9 +21,9 @@ go_library(
     deps = [
         "//cmd/cloud-controller-manager/app:go_default_library",
         "//pkg/cloudprovider/providers:go_default_library",
-        "//staging/src/k8s.io/component-base/logs:go_default_library",
-        "//staging/src/k8s.io/component-base/metrics/prometheus/clientgo:go_default_library",
-        "//staging/src/k8s.io/component-base/metrics/prometheus/version:go_default_library",
+        "//vendor/k8s.io/component-base/logs:go_default_library",
+        "//vendor/k8s.io/component-base/metrics/prometheus/clientgo:go_default_library",
+        "//vendor/k8s.io/component-base/metrics/prometheus/version:go_default_library",
     ],
 )
 

@@ -19,20 +19,3 @@ go_library(
     importpath = "github.com/go-bindata/go-bindata",
     visibility = ["//visibility:public"],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/github.com/go-bindata/go-bindata/go-bindata:all-srcs",
-    ],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

@@ -8,11 +8,15 @@ load(
 
 go_library(
     name = "go_default_library",
-    srcs = ["flags.go"],
+    srcs = [
+        "flags.go",
+        "string_flag.go",
+        "tristate.go",
+    ],
     importpath = "k8s.io/kubernetes/pkg/util/flag",
     deps = [
-        "//staging/src/k8s.io/apimachinery/pkg/util/net:go_default_library",
         "//vendor/github.com/spf13/pflag:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/util/net:go_default_library",
         "//vendor/k8s.io/klog:go_default_library",
     ],
 )

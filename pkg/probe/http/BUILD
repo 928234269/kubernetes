@@ -12,8 +12,8 @@ go_library(
     importpath = "k8s.io/kubernetes/pkg/probe/http",
     deps = [
         "//pkg/probe:go_default_library",
-        "//staging/src/k8s.io/apimachinery/pkg/util/net:go_default_library",
-        "//staging/src/k8s.io/component-base/version:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/util/net:go_default_library",
+        "//vendor/k8s.io/component-base/version:go_default_library",
         "//vendor/k8s.io/klog:go_default_library",
         "//vendor/k8s.io/utils/io:go_default_library",
     ],
@@ -25,9 +25,9 @@ go_test(
     embed = [":go_default_library"],
     deps = [
         "//pkg/probe:go_default_library",
-        "//staging/src/k8s.io/apimachinery/pkg/util/wait:go_default_library",
         "//vendor/github.com/stretchr/testify/assert:go_default_library",
         "//vendor/github.com/stretchr/testify/require:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/util/wait:go_default_library",
     ],
 )
 

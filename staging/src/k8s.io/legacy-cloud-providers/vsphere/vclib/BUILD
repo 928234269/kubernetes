@@ -25,10 +25,6 @@ go_library(
     importmap = "k8s.io/kubernetes/vendor/k8s.io/legacy-cloud-providers/vsphere/vclib",
     importpath = "k8s.io/legacy-cloud-providers/vsphere/vclib",
     deps = [
-        "//staging/src/k8s.io/api/core/v1:go_default_library",
-        "//staging/src/k8s.io/client-go/pkg/version:go_default_library",
-        "//staging/src/k8s.io/component-base/metrics:go_default_library",
-        "//staging/src/k8s.io/component-base/metrics/legacyregistry:go_default_library",
         "//vendor/github.com/vmware/govmomi/find:go_default_library",
         "//vendor/github.com/vmware/govmomi/object:go_default_library",
         "//vendor/github.com/vmware/govmomi/pbm:go_default_library",
@@ -40,6 +36,10 @@ go_library(
         "//vendor/github.com/vmware/govmomi/vim25/mo:go_default_library",
         "//vendor/github.com/vmware/govmomi/vim25/soap:go_default_library",
         "//vendor/github.com/vmware/govmomi/vim25/types:go_default_library",
+        "//vendor/k8s.io/api/core/v1:go_default_library",
+        "//vendor/k8s.io/client-go/pkg/version:go_default_library",
+        "//vendor/k8s.io/component-base/metrics:go_default_library",
+        "//vendor/k8s.io/component-base/metrics/legacyregistry:go_default_library",
         "//vendor/k8s.io/klog:go_default_library",
     ],
 )
@@ -77,5 +77,6 @@ go_test(
         "//vendor/github.com/vmware/govmomi:go_default_library",
         "//vendor/github.com/vmware/govmomi/object:go_default_library",
         "//vendor/github.com/vmware/govmomi/simulator:go_default_library",
+        "//vendor/k8s.io/legacy-cloud-providers/vsphere/vclib:go_default_library",
     ],
 )

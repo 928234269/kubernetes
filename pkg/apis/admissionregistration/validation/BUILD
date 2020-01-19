@@ -12,8 +12,8 @@ go_test(
     embed = [":go_default_library"],
     deps = [
         "//pkg/apis/admissionregistration:go_default_library",
-        "//staging/src/k8s.io/apimachinery/pkg/apis/meta/v1:go_default_library",
-        "//staging/src/k8s.io/apimachinery/pkg/runtime/schema:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/apis/meta/v1:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/runtime/schema:go_default_library",
     ],
 )
 
@@ -25,13 +25,13 @@ go_library(
         "//pkg/apis/admissionregistration:go_default_library",
         "//pkg/apis/admissionregistration/v1:go_default_library",
         "//pkg/apis/admissionregistration/v1beta1:go_default_library",
-        "//staging/src/k8s.io/apimachinery/pkg/api/validation:go_default_library",
-        "//staging/src/k8s.io/apimachinery/pkg/apis/meta/v1/validation:go_default_library",
-        "//staging/src/k8s.io/apimachinery/pkg/runtime/schema:go_default_library",
-        "//staging/src/k8s.io/apimachinery/pkg/util/sets:go_default_library",
-        "//staging/src/k8s.io/apimachinery/pkg/util/validation:go_default_library",
-        "//staging/src/k8s.io/apimachinery/pkg/util/validation/field:go_default_library",
-        "//staging/src/k8s.io/apiserver/pkg/util/webhook:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/api/validation:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/apis/meta/v1/validation:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/runtime/schema:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/util/sets:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/util/validation:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/util/validation/field:go_default_library",
+        "//vendor/k8s.io/apiserver/pkg/util/webhook:go_default_library",
     ],
 )
 

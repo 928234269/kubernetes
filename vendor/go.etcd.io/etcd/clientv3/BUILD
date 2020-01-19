@@ -48,24 +48,3 @@ go_library(
         "//vendor/google.golang.org/grpc/status:go_default_library",
     ],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/go.etcd.io/etcd/clientv3/balancer:all-srcs",
-        "//vendor/go.etcd.io/etcd/clientv3/concurrency:all-srcs",
-        "//vendor/go.etcd.io/etcd/clientv3/credentials:all-srcs",
-        "//vendor/go.etcd.io/etcd/clientv3/namespace:all-srcs",
-        "//vendor/go.etcd.io/etcd/clientv3/naming:all-srcs",
-    ],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

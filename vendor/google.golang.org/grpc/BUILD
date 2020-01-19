@@ -60,37 +60,3 @@ go_library(
         "//vendor/google.golang.org/grpc/tap:go_default_library",
     ],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/google.golang.org/grpc/balancer:all-srcs",
-        "//vendor/google.golang.org/grpc/binarylog/grpc_binarylog_v1:all-srcs",
-        "//vendor/google.golang.org/grpc/codes:all-srcs",
-        "//vendor/google.golang.org/grpc/connectivity:all-srcs",
-        "//vendor/google.golang.org/grpc/credentials:all-srcs",
-        "//vendor/google.golang.org/grpc/encoding:all-srcs",
-        "//vendor/google.golang.org/grpc/grpclog:all-srcs",
-        "//vendor/google.golang.org/grpc/health:all-srcs",
-        "//vendor/google.golang.org/grpc/internal:all-srcs",
-        "//vendor/google.golang.org/grpc/keepalive:all-srcs",
-        "//vendor/google.golang.org/grpc/metadata:all-srcs",
-        "//vendor/google.golang.org/grpc/naming:all-srcs",
-        "//vendor/google.golang.org/grpc/peer:all-srcs",
-        "//vendor/google.golang.org/grpc/resolver:all-srcs",
-        "//vendor/google.golang.org/grpc/serviceconfig:all-srcs",
-        "//vendor/google.golang.org/grpc/stats:all-srcs",
-        "//vendor/google.golang.org/grpc/status:all-srcs",
-        "//vendor/google.golang.org/grpc/tap:all-srcs",
-    ],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

@@ -11,20 +11,3 @@ go_library(
     visibility = ["//visibility:public"],
     deps = ["//vendor/gonum.org/v1/gonum/graph:go_default_library"],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/gonum.org/v1/gonum/graph/encoding/dot:all-srcs",
-    ],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

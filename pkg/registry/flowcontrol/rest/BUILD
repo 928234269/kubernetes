@@ -10,11 +10,11 @@ go_library(
         "//pkg/apis/flowcontrol:go_default_library",
         "//pkg/registry/flowcontrol/flowschema/storage:go_default_library",
         "//pkg/registry/flowcontrol/prioritylevelconfiguration/storage:go_default_library",
-        "//staging/src/k8s.io/api/flowcontrol/v1alpha1:go_default_library",
-        "//staging/src/k8s.io/apiserver/pkg/registry/generic:go_default_library",
-        "//staging/src/k8s.io/apiserver/pkg/registry/rest:go_default_library",
-        "//staging/src/k8s.io/apiserver/pkg/server:go_default_library",
-        "//staging/src/k8s.io/apiserver/pkg/server/storage:go_default_library",
+        "//vendor/k8s.io/api/flowcontrol/v1alpha1:go_default_library",
+        "//vendor/k8s.io/apiserver/pkg/registry/generic:go_default_library",
+        "//vendor/k8s.io/apiserver/pkg/registry/rest:go_default_library",
+        "//vendor/k8s.io/apiserver/pkg/server:go_default_library",
+        "//vendor/k8s.io/apiserver/pkg/server/storage:go_default_library",
     ],
 )
 

@@ -5,19 +5,5 @@ go_library(
     srcs = ["autoneg.go"],
     importmap = "k8s.io/kubernetes/vendor/github.com/prometheus/common/internal/bitbucket.org/ww/goautoneg",
     importpath = "github.com/prometheus/common/internal/bitbucket.org/ww/goautoneg",
-    visibility = ["//staging/src/k8s.io/component-base/metrics:prometheus_import_allow_list"],
-)
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [":package-srcs"],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
+    visibility = ["//vendor/github.com/prometheus/common:__subpackages__"],
 )

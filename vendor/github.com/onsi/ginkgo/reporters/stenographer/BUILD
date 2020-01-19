@@ -12,21 +12,3 @@ go_library(
     visibility = ["//visibility:public"],
     deps = ["//vendor/github.com/onsi/ginkgo/types:go_default_library"],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/github.com/onsi/ginkgo/reporters/stenographer/support/go-colorable:all-srcs",
-        "//vendor/github.com/onsi/ginkgo/reporters/stenographer/support/go-isatty:all-srcs",
-    ],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

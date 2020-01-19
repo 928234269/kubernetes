@@ -29,22 +29,3 @@ go_library(
         "//vendor/github.com/storageos/go-api/types:go_default_library",
     ],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/github.com/storageos/go-api/netutil:all-srcs",
-        "//vendor/github.com/storageos/go-api/serror:all-srcs",
-        "//vendor/github.com/storageos/go-api/types:all-srcs",
-    ],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

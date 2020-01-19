@@ -11,7 +11,7 @@ go_library(
     ],
     importmap = "k8s.io/kubernetes/vendor/github.com/prometheus/common/expfmt",
     importpath = "github.com/prometheus/common/expfmt",
-    visibility = ["//staging/src/k8s.io/component-base/metrics:prometheus_import_allow_list"],
+    visibility = ["//visibility:public"],
     deps = [
         "//vendor/github.com/golang/protobuf/proto:go_default_library",
         "//vendor/github.com/matttproud/golang_protobuf_extensions/pbutil:go_default_library",
@@ -19,18 +19,4 @@ go_library(
         "//vendor/github.com/prometheus/common/internal/bitbucket.org/ww/goautoneg:go_default_library",
         "//vendor/github.com/prometheus/common/model:go_default_library",
     ],
-)
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [":package-srcs"],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
 )

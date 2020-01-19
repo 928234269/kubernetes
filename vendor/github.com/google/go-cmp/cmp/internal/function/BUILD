@@ -7,17 +7,3 @@ go_library(
     importpath = "github.com/google/go-cmp/cmp/internal/function",
     visibility = ["//vendor/github.com/google/go-cmp/cmp:__subpackages__"],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [":package-srcs"],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

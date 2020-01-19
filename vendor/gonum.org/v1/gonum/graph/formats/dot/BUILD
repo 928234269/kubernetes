@@ -16,25 +16,3 @@ go_library(
         "//vendor/gonum.org/v1/gonum/graph/formats/dot/internal/parser:go_default_library",
     ],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/gonum.org/v1/gonum/graph/formats/dot/ast:all-srcs",
-        "//vendor/gonum.org/v1/gonum/graph/formats/dot/internal/astx:all-srcs",
-        "//vendor/gonum.org/v1/gonum/graph/formats/dot/internal/errors:all-srcs",
-        "//vendor/gonum.org/v1/gonum/graph/formats/dot/internal/lexer:all-srcs",
-        "//vendor/gonum.org/v1/gonum/graph/formats/dot/internal/parser:all-srcs",
-        "//vendor/gonum.org/v1/gonum/graph/formats/dot/internal/token:all-srcs",
-    ],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

@@ -17,10 +17,10 @@ go_library(
     importmap = "k8s.io/kubernetes/vendor/k8s.io/sample-apiserver",
     importpath = "k8s.io/sample-apiserver",
     deps = [
-        "//staging/src/k8s.io/apiserver/pkg/server:go_default_library",
-        "//staging/src/k8s.io/component-base/logs:go_default_library",
-        "//staging/src/k8s.io/sample-apiserver/pkg/cmd/server:go_default_library",
+        "//vendor/k8s.io/apiserver/pkg/server:go_default_library",
+        "//vendor/k8s.io/component-base/logs:go_default_library",
         "//vendor/k8s.io/klog:go_default_library",
+        "//vendor/k8s.io/sample-apiserver/pkg/cmd/server:go_default_library",
     ],
 )
 

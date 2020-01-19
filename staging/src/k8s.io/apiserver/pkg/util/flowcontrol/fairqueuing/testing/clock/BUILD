@@ -7,8 +7,8 @@ go_library(
     importpath = "k8s.io/apiserver/pkg/util/flowcontrol/fairqueuing/testing/clock",
     visibility = ["//visibility:public"],
     deps = [
-        "//staging/src/k8s.io/apimachinery/pkg/util/clock:go_default_library",
         "//staging/src/k8s.io/apiserver/pkg/util/flowcontrol/counter:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/util/clock:go_default_library",
         "//vendor/k8s.io/klog:go_default_library",
     ],
 )
@@ -17,7 +17,7 @@ go_test(
     name = "go_default_test",
     srcs = ["event_clock_test.go"],
     embed = [":go_default_library"],
-    deps = ["//staging/src/k8s.io/apimachinery/pkg/util/clock:go_default_library"],
+    deps = ["//vendor/k8s.io/apimachinery/pkg/util/clock:go_default_library"],
 )
 
 filegroup(

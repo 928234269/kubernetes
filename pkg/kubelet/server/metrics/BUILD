@@ -10,8 +10,8 @@ go_library(
     srcs = ["metrics.go"],
     importpath = "k8s.io/kubernetes/pkg/kubelet/server/metrics",
     deps = [
-        "//staging/src/k8s.io/component-base/metrics:go_default_library",
-        "//staging/src/k8s.io/component-base/metrics/legacyregistry:go_default_library",
+        "//vendor/k8s.io/component-base/metrics:go_default_library",
+        "//vendor/k8s.io/component-base/metrics/legacyregistry:go_default_library",
     ],
 )
 

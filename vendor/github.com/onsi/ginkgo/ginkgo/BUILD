@@ -37,28 +37,5 @@ go_library(
 go_binary(
     name = "ginkgo",
     embed = [":go_default_library"],
-    tags = ["manual"],
-    visibility = ["//visibility:public"],
-)
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/github.com/onsi/ginkgo/ginkgo/convert:all-srcs",
-        "//vendor/github.com/onsi/ginkgo/ginkgo/interrupthandler:all-srcs",
-        "//vendor/github.com/onsi/ginkgo/ginkgo/nodot:all-srcs",
-        "//vendor/github.com/onsi/ginkgo/ginkgo/testrunner:all-srcs",
-        "//vendor/github.com/onsi/ginkgo/ginkgo/testsuite:all-srcs",
-        "//vendor/github.com/onsi/ginkgo/ginkgo/watch:all-srcs",
-    ],
-    tags = ["automanaged"],
     visibility = ["//visibility:public"],
 )

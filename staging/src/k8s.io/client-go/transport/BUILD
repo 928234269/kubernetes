@@ -30,8 +30,8 @@ go_library(
     importmap = "k8s.io/kubernetes/vendor/k8s.io/client-go/transport",
     importpath = "k8s.io/client-go/transport",
     deps = [
-        "//staging/src/k8s.io/apimachinery/pkg/util/net:go_default_library",
         "//vendor/golang.org/x/oauth2:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/util/net:go_default_library",
         "//vendor/k8s.io/klog:go_default_library",
     ],
 )

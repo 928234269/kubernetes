@@ -7,17 +7,3 @@ go_library(
     importpath = "golang.org/x/net/internal/iana",
     visibility = ["//vendor/golang.org/x/net:__subpackages__"],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [":package-srcs"],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

@@ -14,7 +14,7 @@ go_library(
         "//cmd/kubelet/app:__pkg__",
         "//pkg/controller/certificates:__subpackages__",
     ],
-    deps = ["//staging/src/k8s.io/api/certificates/v1beta1:go_default_library"],
+    deps = ["//vendor/k8s.io/api/certificates/v1beta1:go_default_library"],
 )
 
 filegroup(
@@ -39,9 +39,9 @@ go_test(
     ],
     embed = [":go_default_library"],
     deps = [
-        "//staging/src/k8s.io/api/certificates/v1beta1:go_default_library",
-        "//staging/src/k8s.io/apimachinery/pkg/util/diff:go_default_library",
         "//vendor/github.com/google/go-cmp/cmp:go_default_library",
         "//vendor/github.com/google/go-cmp/cmp/cmpopts:go_default_library",
+        "//vendor/k8s.io/api/certificates/v1beta1:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/util/diff:go_default_library",
     ],
 )

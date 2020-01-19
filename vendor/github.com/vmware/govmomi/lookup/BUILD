@@ -14,22 +14,3 @@ go_library(
         "//vendor/github.com/vmware/govmomi/vim25/types:go_default_library",
     ],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/github.com/vmware/govmomi/lookup/methods:all-srcs",
-        "//vendor/github.com/vmware/govmomi/lookup/simulator:all-srcs",
-        "//vendor/github.com/vmware/govmomi/lookup/types:all-srcs",
-    ],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

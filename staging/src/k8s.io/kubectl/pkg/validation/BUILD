@@ -7,8 +7,8 @@ go_library(
     importpath = "k8s.io/kubectl/pkg/validation",
     visibility = ["//visibility:public"],
     deps = [
-        "//staging/src/k8s.io/apimachinery/pkg/util/errors:go_default_library",
         "//vendor/github.com/exponent-io/jsonpath:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/util/errors:go_default_library",
     ],
 )
 

@@ -7,9 +7,9 @@ go_library(
     importpath = "k8s.io/component-base/metrics/prometheus/ratelimiter",
     visibility = ["//visibility:public"],
     deps = [
-        "//staging/src/k8s.io/client-go/util/flowcontrol:go_default_library",
-        "//staging/src/k8s.io/component-base/metrics:go_default_library",
-        "//staging/src/k8s.io/component-base/metrics/legacyregistry:go_default_library",
+        "//vendor/k8s.io/client-go/util/flowcontrol:go_default_library",
+        "//vendor/k8s.io/component-base/metrics:go_default_library",
+        "//vendor/k8s.io/component-base/metrics/legacyregistry:go_default_library",
     ],
 )
 
@@ -17,7 +17,7 @@ go_test(
     name = "go_default_test",
     srcs = ["rate_limiter_test.go"],
     embed = [":go_default_library"],
-    deps = ["//staging/src/k8s.io/client-go/util/flowcontrol:go_default_library"],
+    deps = ["//vendor/k8s.io/client-go/util/flowcontrol:go_default_library"],
 )
 
 filegroup(

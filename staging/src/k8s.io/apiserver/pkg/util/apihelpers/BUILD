@@ -6,7 +6,7 @@ go_library(
     importmap = "k8s.io/kubernetes/vendor/k8s.io/apiserver/pkg/util/apihelpers",
     importpath = "k8s.io/apiserver/pkg/util/apihelpers",
     visibility = ["//visibility:public"],
-    deps = ["//staging/src/k8s.io/api/flowcontrol/v1alpha1:go_default_library"],
+    deps = ["//vendor/k8s.io/api/flowcontrol/v1alpha1:go_default_library"],
 )
 
 filegroup(

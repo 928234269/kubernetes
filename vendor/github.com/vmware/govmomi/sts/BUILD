@@ -20,21 +20,3 @@ go_library(
         "//vendor/github.com/vmware/govmomi/vim25/xml:go_default_library",
     ],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/github.com/vmware/govmomi/sts/internal:all-srcs",
-        "//vendor/github.com/vmware/govmomi/sts/simulator:all-srcs",
-    ],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

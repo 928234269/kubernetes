@@ -35,36 +35,3 @@ go_library(
         "//conditions:default": [],
     }),
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/github.com/Microsoft/hcsshim/hcn:all-srcs",
-        "//vendor/github.com/Microsoft/hcsshim/internal/cni:all-srcs",
-        "//vendor/github.com/Microsoft/hcsshim/internal/guid:all-srcs",
-        "//vendor/github.com/Microsoft/hcsshim/internal/hcs:all-srcs",
-        "//vendor/github.com/Microsoft/hcsshim/internal/hcserror:all-srcs",
-        "//vendor/github.com/Microsoft/hcsshim/internal/hns:all-srcs",
-        "//vendor/github.com/Microsoft/hcsshim/internal/interop:all-srcs",
-        "//vendor/github.com/Microsoft/hcsshim/internal/logfields:all-srcs",
-        "//vendor/github.com/Microsoft/hcsshim/internal/longpath:all-srcs",
-        "//vendor/github.com/Microsoft/hcsshim/internal/mergemaps:all-srcs",
-        "//vendor/github.com/Microsoft/hcsshim/internal/regstate:all-srcs",
-        "//vendor/github.com/Microsoft/hcsshim/internal/runhcs:all-srcs",
-        "//vendor/github.com/Microsoft/hcsshim/internal/safefile:all-srcs",
-        "//vendor/github.com/Microsoft/hcsshim/internal/schema1:all-srcs",
-        "//vendor/github.com/Microsoft/hcsshim/internal/schema2:all-srcs",
-        "//vendor/github.com/Microsoft/hcsshim/internal/timeout:all-srcs",
-        "//vendor/github.com/Microsoft/hcsshim/internal/wclayer:all-srcs",
-    ],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

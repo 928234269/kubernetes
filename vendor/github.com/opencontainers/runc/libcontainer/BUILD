@@ -91,31 +91,3 @@ go_library(
         "//conditions:default": [],
     }),
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/github.com/opencontainers/runc/libcontainer/apparmor:all-srcs",
-        "//vendor/github.com/opencontainers/runc/libcontainer/cgroups:all-srcs",
-        "//vendor/github.com/opencontainers/runc/libcontainer/configs:all-srcs",
-        "//vendor/github.com/opencontainers/runc/libcontainer/intelrdt:all-srcs",
-        "//vendor/github.com/opencontainers/runc/libcontainer/keys:all-srcs",
-        "//vendor/github.com/opencontainers/runc/libcontainer/logs:all-srcs",
-        "//vendor/github.com/opencontainers/runc/libcontainer/mount:all-srcs",
-        "//vendor/github.com/opencontainers/runc/libcontainer/seccomp:all-srcs",
-        "//vendor/github.com/opencontainers/runc/libcontainer/stacktrace:all-srcs",
-        "//vendor/github.com/opencontainers/runc/libcontainer/system:all-srcs",
-        "//vendor/github.com/opencontainers/runc/libcontainer/user:all-srcs",
-        "//vendor/github.com/opencontainers/runc/libcontainer/utils:all-srcs",
-    ],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

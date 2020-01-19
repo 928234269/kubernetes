@@ -28,23 +28,3 @@ go_library(
         "//vendor/go.mongodb.org/mongo-driver/x/bsonx/bsoncore:go_default_library",
     ],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/go.mongodb.org/mongo-driver/bson/bsoncodec:all-srcs",
-        "//vendor/go.mongodb.org/mongo-driver/bson/bsonrw:all-srcs",
-        "//vendor/go.mongodb.org/mongo-driver/bson/bsontype:all-srcs",
-        "//vendor/go.mongodb.org/mongo-driver/bson/primitive:all-srcs",
-    ],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)

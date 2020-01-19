@@ -17,7 +17,7 @@ go_library(
         "//pkg/kubelet/cm/cpumanager/topology:go_default_library",
         "//pkg/kubelet/cm/topologymanager/bitmask:go_default_library",
         "//pkg/kubelet/lifecycle:go_default_library",
-        "//staging/src/k8s.io/api/core/v1:go_default_library",
+        "//vendor/k8s.io/api/core/v1:go_default_library",
         "//vendor/k8s.io/klog:go_default_library",
     ],
 )
@@ -54,7 +54,7 @@ go_test(
     deps = [
         "//pkg/kubelet/cm/topologymanager/bitmask:go_default_library",
         "//pkg/kubelet/lifecycle:go_default_library",
-        "//staging/src/k8s.io/api/core/v1:go_default_library",
-        "//staging/src/k8s.io/apimachinery/pkg/types:go_default_library",
+        "//vendor/k8s.io/api/core/v1:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/types:go_default_library",
     ],
 )

@@ -36,21 +36,3 @@ go_library(
         "//vendor/go.uber.org/zap:go_default_library",
     ],
 )
-
-filegroup(
-    name = "package-srcs",
-    srcs = glob(["**"]),
-    tags = ["automanaged"],
-    visibility = ["//visibility:private"],
-)
-
-filegroup(
-    name = "all-srcs",
-    srcs = [
-        ":package-srcs",
-        "//vendor/go.etcd.io/etcd/mvcc/backend:all-srcs",
-        "//vendor/go.etcd.io/etcd/mvcc/mvccpb:all-srcs",
-    ],
-    tags = ["automanaged"],
-    visibility = ["//visibility:public"],
-)
