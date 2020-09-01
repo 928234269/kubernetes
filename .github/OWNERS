@@ -3,15 +3,14 @@
 reviewers:
   - castrojo
   - cblecker
-  - grodrigues3
+  - guineveresaenger
+  - mrbobbytables
   - nikhita
   - parispittman
-  - Phillels
 approvers:
-  - castrojo
-  - cblecker
-  - grodrigues3
+  - sig-contribex-approvers
   - parispittman
+emeritus_approvers:
   - Phillels
 labels:
   - sig/contributor-experience
